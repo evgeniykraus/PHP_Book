@@ -6,6 +6,16 @@
 
 class Test
 {
+    public int $prop1 = 1;
+    public int $prop2 = 2;
+    private int $prop3 = 3;
+    private int $prop4 = 4;
+
+    public function __construct()
+    {
+        //var_dump(get_class_vars(__CLASS__));
+    }
+
     public function method1()
     {
         return true;
