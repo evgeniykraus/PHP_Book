@@ -1,7 +1,8 @@
 <?php
+
 class User
 {
-    private $name;
+    protected $name;
     protected $age;
 
     public function getName(): string
@@ -11,7 +12,7 @@ class User
 
     public function setName(string $name): void
     {
-        $this->name = $name;
+        strlen($name) > 3 ? $this->name = $name : $this->name;
     }
 
     public function getAge(): int
@@ -19,7 +20,7 @@ class User
         return $this->age;
     }
 
-    public function setAge($age): void
+    public function setAge(int $age): void
     {
         $this->age = $age;
     }
