@@ -30,7 +30,7 @@ class Employee
 
     public function setAge(int $age): void
     {
-        $this->age = $this->isAgeCorrect($age);
+        $this->isAgeCorrect($age);
     }
 
     public function setSalary(int $salary): void
@@ -54,9 +54,9 @@ class Employee
         return $this->salary . '' . $currency;
     }
 
-    private function isAgeCorrect($age)
+    private function isAgeCorrect($age): void
     {
-        return ($age >= 1 && $age <= 100) ? $age : $this->age;
+        ($age >= 1 && $age <= 100) ? $this->age = $age : $this->age;
     }
 }
 
