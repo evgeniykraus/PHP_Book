@@ -30,7 +30,9 @@ class Employee
 
     public function setAge(int $age): void
     {
-        $this->isAgeCorrect($age);
+        if ($this->isAgeCorrect($age)) {
+            $this->age = $age;
+        }
     }
 
     public function setSalary(int $salary): void
@@ -54,9 +56,9 @@ class Employee
         return $this->salary . '' . $currency;
     }
 
-    private function isAgeCorrect($age): void
+    private function isAgeCorrect($age): bool
     {
-        ($age >= 1 && $age <= 100) ? $this->age = $age : $this->age;
+        return $age >= 1 && $age <= 100;
     }
 }
 
@@ -65,11 +67,11 @@ $employee = new Employee();
 $employee->setName('Erick');
 var_dump($employee->getName());
 
-$employee->setAge(15);
+$employee->setAge(125);
 var_dump($employee->getAge());
 
 $employee->setSalary(200);
 var_dump($employee->getSalary());
-
-$employee->setAge(15);
-var_dump($employee->getAge());
+//
+//$employee->setAge(15);
+//var_dump($employee->getAge());
