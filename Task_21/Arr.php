@@ -1,5 +1,8 @@
 <?php
 
+require_once 'SumHelper.php';
+require_once 'AvgHelper.php';
+
 class Arr
 {
     private array $numbers;
