@@ -27,7 +27,7 @@ class Arr
 
     public function push(array $numbers): Arr
     {
-        $this->numbers = array_merge($this->numbers, $numbers);
+        $this->numbers = [...$this->numbers, ...$numbers];
         return $this;
     }
 
