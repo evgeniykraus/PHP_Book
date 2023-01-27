@@ -2,7 +2,7 @@
 
 class Student extends User
 {
-    private $course = 1;
+    private int $course = 1;
 
     public function setName(string $name): void
     {

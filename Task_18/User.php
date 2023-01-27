@@ -2,8 +2,8 @@
 
 class User
 {
-    protected $name;
-    protected $age;
+    protected string $name;
+    protected int $age;
 
     public function getName(): string
     {
