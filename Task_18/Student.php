@@ -6,7 +6,9 @@ class Student extends User
 
     public function setName(string $name): void
     {
-        strlen($name) < 10 ? parent::setName($name) : $this->name;
+        if (strlen($name) < 10) {
+            parent::setName($name);
+        }
     }
 
     public function getCourse(): int

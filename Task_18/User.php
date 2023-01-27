@@ -12,7 +12,7 @@ class User
 
     public function setName(string $name): void
     {
-        strlen($name) > 3 ? $this->name = $name : $this->name;
+        $this->name = (strlen($name) > 3) ? $name : $this->name;
     }
 
     public function getAge(): int
