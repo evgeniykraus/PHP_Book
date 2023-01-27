@@ -34,11 +34,13 @@ class Student
 
     public function transferToNextCourse(): void
     {
-        $this->courseIsCorrect($this->course + 1);
+        if ($this->courseIsCorrect($this->course + 1)){
+            $this->course += 1;
+        }
     }
 
-    private function courseIsCorrect(int $course): void
+    private function courseIsCorrect(int $course): bool
     {
-        ($course < 6) ? $this->course = $course : $this->course;
+        return $course < 6;
     }
 }
