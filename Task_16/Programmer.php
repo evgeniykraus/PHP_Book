@@ -5,7 +5,7 @@ class Programmer extends Employee
     private $langs = array();
 
 
-    public function setLangs(array|string $langs): void
+    public function setLangs(array $langs): void
     {
         $this->langs = $langs;
     }
