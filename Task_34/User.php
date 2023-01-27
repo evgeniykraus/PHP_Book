@@ -1,5 +1,7 @@
 <?php
 
+require_once 'iUser.php';
+
 class User implements iUser
 {
 

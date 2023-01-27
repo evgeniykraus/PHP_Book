@@ -1,5 +1,7 @@
 <?php
 
+require_once 'iCube.php';
+
 class Cube implements iCube
 {
     private float $side;
