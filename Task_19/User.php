@@ -37,6 +37,8 @@ class User
 
     private function calculateAge(string $birthday): void
     {
-        $this->age = (int)date("Y-m-d") - (int)date("Y-m-d", strtotime($birthday));
+        $today = new DateTime();
+        $birthday = new DateTime($birthday);
+        $this->age = $today->diff($birthday)->y;
     }
 }
