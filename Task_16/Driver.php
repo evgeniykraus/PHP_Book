@@ -25,7 +25,7 @@ class Driver extends Employee
         return $this->drivingCategory;
     }
 
-    public function setDrivingCategory(array|string $category): void
+    public function setDrivingCategory(array $category): void
     {
         $this->drivingCategory = $category;
     }
