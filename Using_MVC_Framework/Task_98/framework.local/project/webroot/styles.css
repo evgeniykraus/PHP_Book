@@ -1,0 +1,8 @@
+table {
+    border: 1px solid grey;
+}
+
+td {
+    border: 1px solid grey;
+    background: #67bdff;
+}
