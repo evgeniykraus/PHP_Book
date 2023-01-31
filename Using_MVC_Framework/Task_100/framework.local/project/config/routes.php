@@ -13,9 +13,9 @@ return [
     new Route('/user/all/', 'user', 'all'),
     new Route('/user/:id/', 'user', 'show'),
     new Route('/user/:id/:key/', 'user', 'info'),
-    new Route('/products/all/', 'product', 'all'),
-    new Route('/products/:n/', 'product', 'show'),
-    new Route('/page/:id', 'page', 'one'),
+    new Route('/page/:id/', 'page', 'one'),
     new Route('/pages/',   'page', 'all'),
+    new Route('/product/:id/', 'product', 'one'),
+    new Route('/products/',   'product', 'all'),
 ];
 
